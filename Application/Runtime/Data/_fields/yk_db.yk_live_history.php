@@ -1,0 +1,1 @@
+a:7:{i:0;s:7:"user_id";i:1;s:9:"starttime";i:2;s:7:"endtime";i:3;s:4:"kubi";i:4;s:4:"view";i:5;s:6:"praise";s:5:"_type";a:6:{s:7:"user_id";s:12:"varchar(255)";s:9:"starttime";s:7:"int(11)";s:7:"endtime";s:7:"int(11)";s:4:"kubi";s:7:"int(11)";s:4:"view";s:7:"int(11)";s:6:"praise";s:7:"int(11)";}}

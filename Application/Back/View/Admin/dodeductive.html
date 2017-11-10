@@ -1,0 +1,51 @@
+<extend name="Common/index"/>
+<block name="content">
+    <div class="deductiveediting">
+        <form class="form-inline" action="{:U('creatroom')}" id="flist"  method="post" enctype="multipart/form-data">
+            <volist name="yanyiaudit" id="rrr">
+            <div class="form-group">
+                <label for="member">ID</label>
+                <input type="text" class="form-control"  id="member" disabled placeholder="{$rrr['user_id']}">
+                <span>*</span>
+            </div>
+            <div class="form-group">
+                <label for="Name">真实姓名</label>
+                <input type="email" class="form-control" id="Name" disabled placeholder="{$rrr['realname']}">
+                <span>*</span>
+            </div>
+            <div class="form-group">
+                <label for="cellphone">昵称</label>
+                <input type="email" class="form-control" id="cellphone" disabled placeholder="{$rrr['nickname']}">
+                <span>*</span>
+            </div>
+            </volist>
+            <volist name="yanyimg" id="yimg">
+                <div class="form-groups">
+                    <label >演绎认证照片</label>
+                    <img src="__ROOT__/Upload/{$yimg['yanyi_img']}" alt=""/>
+                    <span>*</span>
+                </div>
+            </volist>
+            <div class="form-groups">
+                <label >审核状态</label>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 失败
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" checked="true" id="inlineRadio2" value="2"> 处理中
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 成功
+                </label>
+            </div>
+            <div class="form-groups">
+                <label >失败原因</label>
+                <textarea class="form-control" rows="3" name="content" id="content"></textarea>
+                <span>*</span>
+            </div>
+            <div class="btns">
+                <button value="{$rrr['user_id']}" name="user_id" class="btn btn-info" >完成</button>
+            </div>
+        </form>
+    </div>
+</block>

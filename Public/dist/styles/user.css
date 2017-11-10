@@ -1,0 +1,81 @@
+.user_main {
+  width: 96%;
+  margin: 0 auto;
+  position: relative; }
+  .user_main .user_top {
+    width: 100%; }
+    .user_main .user_top .user_kuai {
+      height: 40px;
+      margin-top: 20px;
+      float: left;
+      width: 20%; }
+      .user_main .user_top .user_kuai p {
+        float: left;
+        line-height: 38px;
+        font-size: 14px;
+        color: #333333;
+        margin-right: 8px; }
+      .user_main .user_top .user_kuai .form-control {
+        float: left;
+        width: 60%;
+        margin-top: 2px; }
+    .user_main .user_top .userlist {
+      margin-right: 0; }
+    .user_main .user_top .user_kuai1 {
+      float: left;
+      height: 38px;
+      margin-top: 15px;
+      margin-right: 26px; }
+      .user_main .user_top .user_kuai1 p.user_pb {
+        float: left;
+        line-height: 36px;
+        font-size: 14px;
+        color: #333333;
+        margin-right: 8px; }
+      .user_main .user_top .user_kuai1 #J-xl {
+        float: left;
+        width: 120px;
+        margin-right: 4px; }
+      .user_main .user_top .user_kuai1 p.user_pc {
+        float: left;
+        line-height: 32px; }
+      .user_main .user_top .user_kuai1 #J-x2 {
+        float: left;
+        width: 120px;
+        margin-left: 4px; }
+  .user_main .JshiBtn {
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 0; }
+    .user_main .JshiBtn button {
+      float: left;
+      margin-right: 10px; }
+    .user_main .JshiBtn p {
+      float: left;
+      font-size: 14px;
+      color: #333333;
+      line-height: 34px; }
+  .user_main .table {
+    width: 100%; }
+    .user_main .table tr th {
+      text-align: left; }
+      .user_main .table tr th label {
+        margin-bottom: 0; }
+  .user_main .pagination {
+    margin: 20px auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0); }
+  .user_main .pagination > a, .user_main .pagination > span {
+    float: left;
+    padding: 4px 12px;
+    line-height: 20px;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-left-width: 0; }
+  .user_main .pagination > a:first-child, .user_main .pagination > span:first-child {
+    border-left-width: 1px; }

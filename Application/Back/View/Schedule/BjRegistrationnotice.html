@@ -1,0 +1,59 @@
+<extend name="Common/index"/>
+<block name="content">
+<div class="zblist">
+    <p class="rec_pa">报名通告详情</p>
+    <div class="zblist_main">
+        <div class="user_kuai1">
+            <form class="form-inline" action="{:('BjRegistrationnotice')}" method="get">
+                <div class="form-group">
+                    <label class="sr-only"></label>
+                    <p class="form-control-static">关键字：</p>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="title" value="{$file['nickname']}" class="form-control" id="inputPassword2" placeholder="输入标题关键字">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+        </div>
+    </div>
+    <form action="">
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th width="15">
+                    <label>
+                        <input type="checkbox" class="js-check-all" id="input-all">
+                    </label>
+                </th>
+                <th>ID</th>
+                <th>通告名称</th>
+                <th>发布时间</th>
+                <th>截止时间</th>
+                <th>报名人数</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <volist name="bjbm" id="bbm">
+                <tr>
+                    <td>
+                        <input type="checkbox" class="js-check" name="ids[]" value="{$tot['user_id']}">
+                    </td>
+                    <td>{$bbm['schedule_id']}</td>
+                    <td>{$bbm['schedule_title']}</td>
+                    <td>{$bbm['createtime']|date="Y-m-d H:i:s",###}</td>
+                    <td>{$bbm['acttime']|date="Y-m-d H:i:s",###}</td>
+                    <td>{$bbm['tot']}</td>
+                    <td>
+                        <a href="{:U('details1',['schedule_id'=>$bbm['schedule_id']])}">详情</a>
+                    </td>
+                </tr>
+            </volist>
+            </tbody>
+        </table>
+    </form>
+    <div class="pagination">
+        {$page_html}
+    </div>
+</div>
+</block>

@@ -1,0 +1,21 @@
+.bjlist {
+  width: 96%;
+  margin: 30px auto 0;
+  overflow: hidden; }
+  .bjlist .form-group {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 34px;
+    line-height: 34px; }
+    .bjlist .form-group label {
+      float: left;
+      width: 110px;
+      text-align: right; }
+    .bjlist .form-group input {
+      float: left;
+      margin-left: 16px; }
+    .bjlist .form-group span {
+      display: block;
+      float: left;
+      margin: 2px 0 0 10px; }

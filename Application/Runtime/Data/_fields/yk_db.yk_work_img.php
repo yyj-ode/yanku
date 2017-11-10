@@ -1,0 +1,1 @@
+a:3:{i:0;s:7:"work_id";i:1;s:8:"work_img";s:5:"_type";a:2:{s:7:"work_id";s:7:"int(11)";s:8:"work_img";s:12:"varchar(255)";}}

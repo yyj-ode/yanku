@@ -1,0 +1,74 @@
+<?php
+header("Content-Type:text/html;charset=utf-8");
+session_start();
+if(!isset($_SESSION['name'])){
+	echo "非法登录！";
+	header("Refresh:2;url=http://rest.yankushidai.com/index.php/Back/Index/login.html");
+	die();
+}
+?>
+<ul class="topnav">
+    <li>
+        <a href="#">用户管理</a>
+        <ul>
+            <li><a href="#">用户组</a>
+                <ul>
+                    <li><a href="{:U('Admin/user')}">所有用户</a></li>
+                    <li><a href="{:U('Admin/identity')}">实名认证</a></li>
+                    <li><a href="{:U('Admin/deductive')}">演绎认证</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">财务管理</a>
+        <ul>
+            <li><a href="{:U('Cash/rechargerecord')}">充值记录</a></li>
+            <li><a href="{:U('Cash/showrecords')}">提现记录</a></li>
+            <li><a href="{:U('Cash/expensecalendar')}">消费记录</a></li>
+            <li><a href="{:U('Cash/topuprules')}">充值规则</a></li>
+
+        </ul>
+    </li>
+    <li><a href="#">直播管理</a>
+        <ul>
+            <li><a href="{:U('Live/zblist')}">直播列表</a></li>
+            <li><a href="{:U('Live/video')}">直播监控</a></li>
+            <li><a href="{:U('Live/message')}">系统消息</a></li>
+            <li><a href="{:U('Live/usersreport')}">用户举报</a></li>
+            <li><a href="{:U('Live/record')}">直播记录</a></li>
+        </ul>
+    </li>
+    <li><a href="#">内容管理</a>
+        <ul>
+            <li><a href="{:U('Content/feedback')}">用户反馈</a></li>
+            <li><a href="{:U('Content/page')}">页面管理</a></li>
+        </ul>
+    </li>
+    <li><a href="#">礼物管理</a>
+        <ul>
+            <li><a href="{:U('Gift/giftlist')}">礼物列表</a></li>
+        </ul>
+    </li>
+    <li><a href="#">通告管理</a>
+        <ul>
+            <li><a href="{:U('Schedule/shenhe')}">通告审核</a></li>
+            <li><a href="{:U('Schedule/alerts')}">发布通告</a></li>
+            <li><a href="{:U('Schedule/Registrationnotice')}">报名通告</a></li>
+            <li><a href="{:U('Schedule/appointmentnotice')}">应约通告</a></li>
+            <li><a href="{:U('Schedule/Fynotice')}">负约通告</a></li>
+        </ul>
+    </li>
+    <li><a href="#">等级管理</a>
+        <ul>
+            <li><a href="{:U('Level/integralgrade')}">积分等级</a></li>
+            <li><a href="{:U('Level/classgrade')}">礼物等级</a></li>
+        </ul>
+    </li>
+    <li><a href="#">登录奖励</a>
+        <ul>
+            <li><a href="#">奖励管理</a></li>
+        </ul>
+    </li>
+
+</ul>

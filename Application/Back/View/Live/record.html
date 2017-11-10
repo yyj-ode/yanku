@@ -1,0 +1,50 @@
+<extend name="Common/index"/>
+<block name="content">
+    <div class="record">
+        <p class="rec_pa">直播列表</p>
+        <div class="zblist_main">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="sr-only"></label>
+                    <p class="form-control-static">关键字：</p>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="请输入用户昵称">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+        </div>
+
+        <form action="">
+            <table class="table table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>昵称</th>
+                    <th>直播开始时间</th>
+                    <th>直播结束时间</th>
+                    <th>直播收益</th>
+                    <th>观看人数</th>
+                    <th>点赞数</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="history" id="his">
+                <tr>
+                    <td>{$his['user_id']}</td>
+                    <td>{$his['nickname']}</td>
+                    <td>{$his['starttime']|date="Y-m-d H:i:s",###}</td>
+                    <td>{$his['endtime']|date="Y-m-d H:i:s",###}</td>
+                    <td>{$his['kubi']}</td>
+                    <td>{$his['view']}</td>
+                    <td>{$his['praise']}</td>
+                </tr>
+                </volist>
+                </tbody>
+            </table>
+        </form>
+        <div class="pagination">
+            {$page_html}
+        </div>
+    </div>
+    </block>

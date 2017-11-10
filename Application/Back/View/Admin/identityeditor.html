@@ -1,0 +1,59 @@
+<extend name="Common/index"/>
+<block name="content">
+    <div class="Identityeditor" >
+        <form  class="form-inline" action="{:U('auditshenfen')}" method="post" enctype="multipart/form-data" >
+            <volist name="authshim" id="authsm">
+                <div class="form-group">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" disabled placeholder="{$authsm['user_id']}">
+                    <span>*</span>
+            </div>
+            <div class="form-group">
+                <label for="member">昵称</label>
+                <input type="text" class="form-control" id="member" disabled placeholder="{$authsm['nickname']}">
+                <span>*</span>
+            </div>
+            <div class="form-group">
+                <label for="Name">真实姓名</label>
+                <input type="email" class="form-control" id="Name" disabled placeholder="{$authsm['realname']}">
+                <span>*</span>
+            </div>
+            <div class="form-group">
+                <label for="cellphone">手机号码</label>
+                <input type="email" class="form-control" id="cellphone" disabled value="{$authsm['mobile']}">
+                <span>*</span>
+            </div>
+
+            <div class="form-group">
+                <label for="Idno">身份证号码</label>
+                <input type="email" class="form-control" id="Idno" disabled value="{$authsm['IDcard_number']}">
+                <span>*</span>
+            </div>
+            <div class="form-groups">
+                <label >手持证件照</label>
+                <img src="__ROOT__/Upload/{$authsm['user_positive']}" alt=""/>
+                <span>*</span>
+            </div>
+            <div class="form-groups">
+                <label >审核状态</label>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 失败
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" checked="checked" id="inlineRadio1" value="2"> 处理中
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="3"> 成功
+                </label>
+            </div>
+            <div class="form-groups">
+                <label >失败原因</label>
+                <textarea class="form-control" rows="3" name="content" id="content"></textarea>
+            </div>
+            <div class="btns">
+                <button value="{$authsm['user_id']}" name="user_id" class="btn btn-info">完成</button>
+            </div>
+            </volist>
+        </form>
+    </div>
+</block>

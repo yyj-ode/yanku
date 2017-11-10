@@ -1,0 +1,1 @@
+a:5:{i:0;s:3:"jid";i:1;s:3:"vid";i:2;s:3:"uid";s:3:"_pk";s:3:"jid";s:5:"_type";a:3:{s:3:"jid";s:16:"int(10) unsigned";s:3:"vid";s:7:"int(11)";s:3:"uid";s:16:"int(10) unsigned";}}

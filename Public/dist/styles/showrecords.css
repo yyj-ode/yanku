@@ -1,0 +1,77 @@
+@charset "UTF-8";
+.showrecords {
+  width: 96%;
+  margin: 0 auto;
+  overflow: hidden; }
+  .showrecords .rec_pa {
+    font-size: 14px;
+    color: #333333;
+    padding-top: 15px; }
+  .showrecords .shower_pa {
+    overflow: hidden;
+    clear: both; }
+  .showrecords p.Jlus {
+    font-size: 14px;
+    color: #333333;
+    font-weight: bolder;
+    padding-top: 10px;
+    float: left;
+    margin-right: 24px; }
+  .showrecords .user_kuai {
+    height: 40px;
+    float: left;
+    width: 20%; }
+    .showrecords .user_kuai p {
+      float: left;
+      line-height: 38px;
+      font-size: 14px;
+      color: #333333;
+      margin-right: 8px; }
+    .showrecords .user_kuai .form-control {
+      float: left;
+      width: 60%;
+      margin-top: 2px; }
+  .showrecords .user_kuai1 {
+    float: left;
+    height: 38px;
+    margin-right: 26px; }
+    .showrecords .user_kuai1 p.user_pb {
+      float: left;
+      line-height: 36px;
+      font-size: 14px;
+      color: #333333;
+      margin-right: 8px; }
+    .showrecords .user_kuai1 #J-xl {
+      float: left;
+      width: 120px;
+      margin-right: 4px; }
+    .showrecords .user_kuai1 p.user_pc {
+      float: left;
+      line-height: 32px; }
+    .showrecords .user_kuai1 #J-x2 {
+      float: left;
+      width: 120px;
+      margin-left: 4px; }
+  .showrecords .form-inline {
+    float: left; }
+  .showrecords .pagination {
+    margin: 20px auto;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0); }
+  .showrecords .pagination > a, .showrecords .pagination > span {
+    float: left;
+    padding: 4px 12px;
+    line-height: 20px;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-left-width: 0; }
+  .showrecords .pagination > a:first-child, .showrecords .pagination > span:first-child {
+    border-left-width: 1px; }
+
+/*showrecordsXq  提现记录详情*/

@@ -1,0 +1,30 @@
+[ 2017-04-27T12:33:22+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001425s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-04-27T17:01:32+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001362s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-04-27T17:01:34+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001141s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-04-27T17:34:58+08:00 ] 127.0.0.1 /yanku/index.php/API/index/shi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001429s ]
+ERR: 无法加载模块:Yanku
+
+[ 2017-04-27T17:59:05+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001524s ]
+ERR: 无法加载模块:Favicon
+

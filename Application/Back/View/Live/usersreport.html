@@ -1,0 +1,62 @@
+<extend name="Common/index"/>
+<block name="content">
+    <div class="usersreport">
+        <p class="rec_pa">用户举报</p>
+        <div class="zblist_main">
+            <div class="user_kuai1">
+                <form class="form-inline" action="{:('usersreport')}" method="get">
+                    <div class="form-group">
+                        <label class="sr-only"></label>
+                        <p class="form-control-static">关键字：</p>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="title" value="{$file['nickname']}" class="form-control" id="inputPassword2" placeholder="输入id">
+                    </div>
+                    <button type="submit" class="btn btn-default">搜索</button>
+                </form>
+            </div>
+        </div>
+        <form action="">
+            <table class="table table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th width="15">
+                        <label>
+                            <input type="checkbox" class="js-check-all" id="input-all">
+                        </label>
+                    </th>
+                    <!--<th>ID</th>-->
+                    <th>举报人</th>
+                    <th>被举报人</th>
+                    <th>举报原因</th>
+                    <th>举报内容</th>
+                    <th>举报时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="show" id="ss">
+                    <tr>
+                        <td>
+                            <input type="checkbox" class="js-check" name="ids[]" value="{$tot['user_id']}">
+                        </td>
+                        <!--<td>{$ss['id']}</td>-->
+                        <td>{$ss['report_id']} </td>
+                        <td>{$ss['user_id']}</td>
+                        <td>{$ss['reason']}</td>
+                        <td>{$ss['explain']}</td>
+                        <td>8888</td>
+                        <td>
+                            <a href="">详情</a>
+                            <a href="">删除</a>
+                        </td>
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+        </form>
+        <div class="pagination">
+            {$page_html}
+        </div>
+    </div>
+</block>

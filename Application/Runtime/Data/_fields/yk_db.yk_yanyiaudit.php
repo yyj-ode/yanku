@@ -1,0 +1,1 @@
+a:8:{i:0;s:7:"user_id";i:1;s:11:"create_time";i:2;s:12:"console_time";i:3;s:6:"status";i:4;s:8:"yanyi_id";i:5;s:9:"yanyi_rea";s:3:"_pk";s:8:"yanyi_id";s:5:"_type";a:6:{s:7:"user_id";s:7:"int(11)";s:11:"create_time";s:7:"int(11)";s:12:"console_time";s:7:"int(11)";s:6:"status";s:10:"tinyint(4)";s:8:"yanyi_id";s:7:"int(11)";s:9:"yanyi_rea";s:12:"varchar(255)";}}

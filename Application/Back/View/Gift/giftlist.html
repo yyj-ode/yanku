@@ -1,0 +1,63 @@
+<extend name="Common/index"/>
+<block name="content">
+    <div class="giftlist">
+        <p class="rec_pa">礼物列表</p>
+        <div class="zblist_main">
+            <div class="user_kuai1">
+                <form class="form-inline" action="{:('giftlist')}" method="get">
+                    <div class="form-group">
+                        <label class="sr-only"></label>
+                        <p class="form-control-static">礼物名称：</p>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="title" value="{$file['nickname']}" class="form-control" id="inputPassword2" placeholder="输入礼物名称">
+                    </div>
+                    <button type="submit" class="btn btn-default">搜索</button>
+                </form>
+            </div>
+            <div style="float:left;margin-top:30px;margin-left:-330px;">
+                <form action="{:U('addgift')}" class="form-inline" style="margin-top:20px">
+                    <button type="submit" class="btn btn-default">添加礼物</button>
+                </form>
+            </div>
+        </div>
+        <form action="">
+            <table class="table table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th width="15">
+                        <label>
+                            <input type="checkbox" class="js-check-all" id="input-all">
+                        </label>
+                    </th>
+                    <th>ID</th>
+                    <th>礼物类型</th>
+                    <th>礼物名称</th>
+                    <th>所需库币</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="rrr" id="ttt">
+                    <tr>
+                        <td>
+                            <input type="checkbox" class="js-check" name="ids[]" value="{$tot['user_id']}">
+                        </td>
+                        <td>{$ttt['gift_type']}</td>
+                        <td>{$ttt['batch']}</td>
+                        <td>{$ttt['name']}</td>
+                        <td>{$ttt['price']}</td>
+                        <td>
+                            <a href="{:U('dogiftlist',['gift_type'=>$ttt['gift_type']])}">编辑</a>
+                            <a href="{:U('Bjalerts',['gift_type'=>$ttt['gift_type']])}">删除</a>
+                        </td>
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+        </form>
+        <div class="pagination">
+            {$page_html}
+        </div>
+    </div>
+</block>

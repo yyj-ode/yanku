@@ -1,0 +1,55 @@
+<extend name="Common/index"/>
+<block name="content">
+<div class="zblist">
+    <p class="rec_pa">应约通告</p>
+    <!--<div class="zblist_main">-->
+        <!--<div class="user_kuai1">-->
+            <!--<p class="user_pb">应约时间：</p>-->
+            <!--<input class="form-control"  type="text" id="J-xl">-->
+            <!--<p class="user_pc">—</p>-->
+            <!--<input class="form-control"  type="text" id="J-x2">-->
+        <!--</div>-->
+        <!--<form class="form-inline">-->
+            <!--<div class="form-group">-->
+                <!--<label class="sr-only"></label>-->
+                <!--<p class="form-control-static">关键字：</p>-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<label for="inputPassword2" class="sr-only">关键字</label>-->
+                <!--<input type="text" class="form-control" id="inputPassword2" placeholder="关键字">-->
+            <!--</div>-->
+            <!--<button type="submit" class="btn btn-default">搜索</button>-->
+        <!--</form>-->
+    <!--</div>-->
+    <form action="">
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th>通告类型</th>
+                <th>应约人数</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <volist name="reg" id="yiy">
+            <tr>
+                <td>
+                    <if condition="($yiy.schedule_type eq 0)">影视通告
+                    <elseif condition="$yiy.schedule_type eq 1"/>模特招募
+                    <elseif condition="$yiy.schedule_type eq 2"/>群众演员
+                    <elseif condition="$yiy.schedule_type eq 3"/>主播
+                    <elseif condition="$yiy.schedule_type eq 4"/>主持
+                    <else />歌手
+                    </if>
+                </td>
+                <td>{$yiy['toto']}</td>
+                <td>
+                    <a href="{:U('Bjappointmentnotice',['schedule_type'=>$yiy['schedule_type']])}">详情</a>
+                </td>
+            </tr>
+            </volist>
+            </tbody>
+        </table>
+    </form>
+</div>
+</block>

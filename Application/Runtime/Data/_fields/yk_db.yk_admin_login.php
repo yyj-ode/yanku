@@ -1,0 +1,1 @@
+a:6:{i:0;s:8:"login_id";i:1;s:8:"admin_id";i:2;s:10:"login_time";i:3;s:8:"login_ip";s:3:"_pk";s:8:"login_id";s:5:"_type";a:4:{s:8:"login_id";s:25:"int(11) unsigned zerofill";s:8:"admin_id";s:16:"int(11) unsigned";s:10:"login_time";s:16:"int(11) unsigned";s:8:"login_ip";s:16:"int(11) unsigned";}}

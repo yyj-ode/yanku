@@ -1,0 +1,1 @@
+a:7:{i:0;s:7:"user_id";i:1;s:11:"create_time";i:2;s:12:"console_time";i:3;s:6:"status";i:4;s:2:"id";s:3:"_pk";s:2:"id";s:5:"_type";a:5:{s:7:"user_id";s:7:"int(11)";s:11:"create_time";s:7:"int(11)";s:12:"console_time";s:7:"int(11)";s:6:"status";s:10:"tinyint(4)";s:2:"id";s:16:"int(10) unsigned";}}

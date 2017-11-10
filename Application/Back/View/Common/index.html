@@ -1,0 +1,64 @@
+<?php
+header("Content-Type:text/html;charset=utf-8");
+session_start();
+if(!isset($_SESSION['name'])){
+	echo "非法登录！";
+	header("Refresh:2;url=http://rest.yankushidai.com/index.php/Back/Index/login.html");
+	die();
+}
+?>
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>演库</title>
+    <link rel="stylesheet" href="__PUBLIC__/dist/styles/app.css"/>
+</head>
+<body>
+<div class="yanku">
+    <div class="yanku_top">
+        <div class="top_main">
+            <a href="" class="yanku_a">演库后台管理中心</a>
+            <div style="width:120px;float:left;margin-left:950px;margin-top:10px;">
+                <?php echo "欢迎：".$_SESSION['name'];?>
+            </div>
+            <div style="width:50px;float:left;">
+            <a href="{:U('Index/logout')}" class="yanku_b">退出</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="yanku_mains">
+    <div class="yanku_left">
+        <!--菜单独立-->
+        <include file="Common/menu"/>
+
+    </div>
+    <div class="yanku_right">
+        <block name="content"></block>
+    </div>
+</div>
+
+<script src="__PUBLIC__/dist/scripts/jquery-2.1.1.min.js"></script>
+<script src="__PUBLIC__/dist/scripts/scriptbreaker-multiple-accordion-1.js"></script>
+<script src="__PUBLIC__/dist/scripts/bootstrap.min.js"></script>
+<script src="__PUBLIC__/dist/scripts/common.js"></script>
+<!--<script src="__PUBLIC__/gulpfile.js"></script>-->
+<script src="__PUBLIC__/laydate.dev.js"></script>
+
+<block name="appendJs"></block>
+<script type="text/javascript">
+    //左侧按钮
+    $(document).ready(function() {
+        $(".topnav").accordion({
+            accordion:true,
+            speed: 250,
+            closedSign: '[+]',
+            openedSign: '[-]'
+        });
+    });
+</script>
+</body>
+</html>

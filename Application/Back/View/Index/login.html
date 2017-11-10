@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="__PUBLIC__/dist/styles/normalize.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/dist/styles/bootstrap.min.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/dist/styles/login.min.css"/>
+</head>
+<body>
+    <div class="main">
+        <p class="main_pa">演库</p>
+        <div class="main_d">
+            <p class="main_pb">管理员登录</p>
+            <form action="{:U('login')}" method="post" name="myform" enctype="multipart/form-data">
+                <div class="input-group">
+                    <label class="input-group-addon" >账号：</label>
+                    <input class="form-control" name="username" class="ipt" value="" type="text">
+                </div>
+                <div class="input-group">
+                    <label class="input-group-addon" >密码：</label>
+                    <input class="form-control" name="password" class="ipt" value="" type="password">
+                </div>
+                <input class="btn btn-info" name="dosubmit" class="login_tj_btn" type="submit" value="登录"/>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

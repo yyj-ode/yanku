@@ -1,0 +1,1 @@
+a:4:{i:0;s:7:"city_id";i:1;s:9:"city_name";s:3:"_pk";s:7:"city_id";s:5:"_type";a:2:{s:7:"city_id";s:21:"mediumint(9) unsigned";s:9:"city_name";s:11:"varchar(10)";}}

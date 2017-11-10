@@ -1,0 +1,63 @@
+<extend name="Common/index"/>
+<block name="content">
+    <div class="deductiveMain">
+        <p class="rec_pa">演绎认证</p>
+        <div class="user_top">
+            <!--<div class="user_kuai1">-->
+            <!--<p class="user_pb">注册时间：</p>-->
+            <!--<input class="form-control"  type="text" id="J-xl">-->
+            <!--<p class="user_pc">—</p>-->
+            <!--<input class="form-control"  type="text" id="J-x2">-->
+            <!--</div>-->
+            <div class="user_kuai1">
+                <form class="form-inline" action="{:('deductive')}" method="get">
+                    <div class="form-group">
+                        <label class="sr-only"></label>
+                        <p class="form-control-static">用户昵称：</p>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="title" value="{$file['nickname']}" class="form-control" id="inputPassword2" placeholder="输入昵称">
+                    </div>
+                    <button type="submit" class="btn btn-default">搜索</button>
+                </form>
+            </div>
+        </div>
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>昵称</th>
+                <th>真实姓名</th>
+                <th>审核状态</th>
+                <th>提交时间</th>
+                <th>处理时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <form>
+                <volist name="rows" id="row">
+                    <tr>
+                        <td>{$row['user_id']}</td>
+                        <td>{$row['nickname']} </td>
+                        <td>{$row['realname']} </td>
+                        <!--<td>{$row['status']}</td>-->
+                        <td><if condition="($row.status eq 1)">审核中
+                            <elseif condition="$row.status eq 2"/>成功
+                            <else />失败
+                        </if></td>
+                        <td>{$row['create_time']|date="Y-m-d H:i:s",###}</td>
+                        <td>{$row['console_time']|date="Y-m-d H:i:s",###}</td>
+                        <td>
+                            <a href="{:U('dodeductive',['user_id'=>$row['user_id']])}">去认证.</a>
+                        </td>
+                    </tr>
+                </volist>
+            </form>
+            </tbody>
+        </table>
+        <div class="pagination">
+            {$page_html}
+        </div>
+    </div>
+</block>

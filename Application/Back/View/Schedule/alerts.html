@@ -1,0 +1,49 @@
+<extend name="Common/index"/>
+<block name="content">
+<div class="zblist">
+    <p class="rec_pa">通告统计</p>
+    <!--<div class="zblist_main">-->
+        <!--<form class="form-inline">-->
+            <!--<div class="form-group">-->
+                <!--<label class="sr-only"></label>-->
+                <!--<p class="form-control-static">关键字：</p>-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<label for="inputPassword2" class="sr-only">关键字</label>-->
+                <!--<input type="text" class="form-control" id="inputPassword2" placeholder="关键字">-->
+            <!--</div>-->
+            <!--<button type="submit" class="btn btn-default">搜索</button>-->
+        <!--</form>-->
+    <!--</div>-->
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th>类型</th>
+            <th>发布数量</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <form >
+            <volist name="rows" id="tg">
+                <tr>
+                    <td>
+                    <if condition="($tg.schedule_type eq 0)">影视通告
+                        <elseif condition="$tg.schedule_type eq 1"/>模特招募
+                        <elseif condition="$tg.schedule_type eq 2"/>群众演员
+                        <elseif condition="$tg.schedule_type eq 3"/>主播
+                        <elseif condition="$tg.schedule_type eq 4"/>主持
+                        <else />歌手
+                    </if>
+                    </td>
+                    <td>{$tg['tot']}</td>
+                    <td>
+                        <a href="{:U('Bjalerts',['schedule_type'=>$tg['schedule_type']])}">详情</a>
+                    </td>
+                </tr>
+            </volist>
+        </form>
+        </tbody>
+    </table>
+</div>
+</block>

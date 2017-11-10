@@ -1,0 +1,1 @@
+a:4:{i:0;s:7:"user_id";i:1;s:9:"yanyi_img";i:2;s:8:"yanyi_id";s:5:"_type";a:3:{s:7:"user_id";s:7:"int(11)";s:9:"yanyi_img";s:12:"varchar(255)";s:8:"yanyi_id";s:7:"int(11)";}}

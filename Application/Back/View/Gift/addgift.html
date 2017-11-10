@@ -1,0 +1,44 @@
+<extend name="Common/index"/>
+<block name="content">
+<div class="giftlist">
+    <p class="rec_pa">添加礼物列表</p>
+    <div class="zblist_main">
+        <form  class="form-inline" action="{:U('add')}" method="post" enctype="multipart/form-data" >
+                <div class="form-group">
+                    <label for="id">礼物序号</label>
+                    <input type="text" class="form-control" name="id" id="id" placeholder="{$gift['gift_type']}">
+                    <span>*</span>
+                </div>
+                <div class="form-group">
+                    <select name="type" for="type">
+                        <option>赠送类型-></option>
+                        <option value="1">送礼类</option>
+                        <option value="2">众筹类</option>
+                    </select>
+                    <span>*</span>
+                </div>
+                <div class="form-group">
+                    <select name="batch" for="batch">
+                        <option>送礼类型-></option>
+                        <option value="0">单送类</option>
+                        <option value="1">连送类</option>
+                    </select>
+                    <span>*</span>
+                </div>
+                <div class="form-group">
+                    <label for="name">礼物名称</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="{$gift['name']}">
+                    <span>*</span>
+                </div>
+                <div class="form-group">
+                    <label for="kubi">所需酷币</label>
+                    <input type="text" class="form-control" name="kubi" id="kubi" value="{$gift['price']}">
+                    <span>*</span>
+                </div>
+                <div class="btns">
+                    <button value="{$gift['user_id']}" name="gifttype" class="btn btn-info">添加</button>
+                </div>
+        </form>
+    </div>
+</div>
+</block>

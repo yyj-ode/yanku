@@ -1,0 +1,54 @@
+.deductiveMain {
+  width: 96%;
+  overflow: hidden;
+  margin: 30px auto 0; }
+  .deductiveMain .table {
+    overflow: hidden;
+    margin-top: 30px;
+    float: left; }
+  .deductiveMain .pagination {
+    margin: 20px auto;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0); }
+  .deductiveMain .pagination > a, .deductiveMain .pagination > span {
+    float: left;
+    padding: 4px 12px;
+    line-height: 20px;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-left-width: 0; }
+  .deductiveMain .pagination > a:first-child, .deductiveMain .pagination > span:first-child {
+    border-left-width: 1px; }
+  .deductiveMain .td_img1 {
+    width: 40px;
+    float: left;
+    margin-right: 5px; }
+  .deductiveMain .user_kuai1 {
+    float: left;
+    height: 38px;
+    margin-right: 26px; }
+    .deductiveMain .user_kuai1 p.user_pb {
+      float: left;
+      line-height: 36px;
+      font-size: 14px;
+      color: #333333;
+      margin-right: 8px; }
+    .deductiveMain .user_kuai1 #J-xl {
+      float: left;
+      width: 120px;
+      margin-right: 4px; }
+    .deductiveMain .user_kuai1 p.user_pc {
+      float: left;
+      line-height: 32px; }
+    .deductiveMain .user_kuai1 #J-x2 {
+      float: left;
+      width: 120px;
+      margin-left: 4px; }
+  .deductiveMain .form-inline {
+    float: left; }

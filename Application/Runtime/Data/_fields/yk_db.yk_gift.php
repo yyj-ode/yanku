@@ -1,0 +1,1 @@
+a:8:{i:0;s:9:"gift_type";i:1;s:4:"type";i:2;s:5:"price";i:3;s:5:"batch";i:4;s:4:"name";i:5;s:8:"gift_img";s:3:"_pk";s:9:"gift_type";s:5:"_type";a:6:{s:9:"gift_type";s:10:"tinyint(4)";s:4:"type";s:10:"tinyint(4)";s:5:"price";s:12:"mediumint(6)";s:5:"batch";s:10:"tinyint(4)";s:4:"name";s:12:"varchar(255)";s:8:"gift_img";s:12:"varchar(255)";}}

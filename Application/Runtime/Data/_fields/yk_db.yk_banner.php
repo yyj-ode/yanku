@@ -1,0 +1,1 @@
+a:4:{i:0;s:11:"banner_type";i:1;s:7:"type_id";i:2;s:9:"banner_id";s:5:"_type";a:3:{s:11:"banner_type";s:7:"int(11)";s:7:"type_id";s:7:"int(11)";s:9:"banner_id";s:7:"int(11)";}}

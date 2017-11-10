@@ -1,0 +1,75 @@
+<extend name="Common/index"/>
+<block name="content">
+    <style>
+        .example-video-dimensions.vjs-fluid{padding-top: 0 !important;} .vjs-fluid {padding-top: 0 !important;}
+    </style>
+    <div class="video">
+        <p>直播监控</p>
+        <div class="video_soso">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="sr-only"></label>
+                    <p class="form-control-static">关键字：</p>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="输入房间号">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+        </div>
+        <ul class="videos">
+            <volist name="rows" id="rrr">
+            <li>
+                <video id={$rrr['user_id']}  class="video-js mobile-first-skin" controls preload="auto" width="360" height="640"  webkit-playsinline playsinline x5-video-player-type="h5"  x5-video-player-fullscreen="true">
+                    <source src="{$rrr['pull']}" type='video/x-flv' />
+                </video>
+                <!--<p class="pa">开播时间：{$rrr['starttim']}</p>-->
+                <p class="pb">主播：{$rrr['nickname']}</p>
+                <p class="pc">房间号：{$rrr['room_id']}</p>
+                <button href="{:U('dellist')}" id="button-delete" type="button" class="js-ajax-dialog-btn">关闭</button>
+                <!--<button href="{:U('dellist')}" id="button-delete" class="js-ajax-dialog-btn">删除</button>-->
+            </li>
+            </volist>
+        </ul>
+        <div class="pagination">
+            {$page_html}
+        </div>
+    </div>
+    <!--<script>-->
+        <!--ksplayer.options.flash.swf = "ksplayer.swf";-->
+    <!--</script>-->
+
+    <!--<script type="text/javascript" src="__PUBLIC__/dist/scripts/video.js"></script>-->
+    <script type="text/javascript" src="__PUBLIC__/js/ksplayer.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/laydate.dev.js"></script>
+    <script>
+        var player = ksplayer('{$rrr["user_id"]}',{
+            language: 'zh-CN',
+            fluid: true,  //响应式
+            bigPlayButton: true,
+            autoplay:false,
+            controlBar: {
+                volumeMenuButton: {
+                    inline: false,
+                    vertical: true
+                }
+            }
+        });
+//        var player1 = ksplayer('{$rrr["user_id"]}',{
+//            language: 'zh-CN',
+//            fluid: true,  //响应式
+//            bigPlayButton: true,
+//            autoplay:false,
+//            controlBar: {
+//                volumeMenuButton: {
+//                    inline: false,
+//                    vertical: true
+//                }
+//            }
+//        });
+    </script>
+</block>
+<block name="appendJs">
+
+
+</block>

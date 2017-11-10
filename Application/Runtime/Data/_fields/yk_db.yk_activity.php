@@ -1,0 +1,1 @@
+a:6:{i:0;s:11:"activity_id";i:1;s:12:"activity_img";i:2;s:12:"activity_url";i:3;s:13:"activity_push";s:3:"_pk";s:11:"activity_id";s:5:"_type";a:4:{s:11:"activity_id";s:7:"int(11)";s:12:"activity_img";s:12:"varchar(255)";s:12:"activity_url";s:12:"varchar(255)";s:13:"activity_push";s:7:"int(11)";}}

@@ -1,0 +1,109 @@
+<extend name="Common/index"/>
+
+<block name="content">
+    <div class="admin_index">
+        <div class="index_mains">
+            <div class="index_1">
+                <div class="top">用户统计</div>
+                <ul class="i_ul"  >
+                    <volist name="total" id="res">
+                        <li>注册量：<span><a href="http://47.92.88.5/index.php/Back/Admin/user.html">{$res['tot']}</a></span></li>
+                    </volist>
+                    <volist name="live" id="li">
+                        <li>主播数量：<span>{$li['live']}</span></li>
+                    </volist>
+                    <volist name="sche" id="sh">
+                        <li>发通告数量：<span>{$sh['sch_all']}</span></li>
+                    </volist>
+                    <volist name="user_sch" id="user">
+                        <li>报名数量：<span>{$user['user_sch']}</span></li>
+                    </volist>
+                    <volist name="usersch" id="user_sch">
+                        <li>应约数量：<span>{$user_sch['usersch']}</span></li>
+                    </volist>
+                    <volist name="fuy" id="fy">
+                        <li>负约数量：<span>{$fy['toto']}</span></li>
+                    </volist>
+                </ul>
+            </div>
+            <div class="index_1">
+                <div class="top">充值数据</div>
+                <ul class="i_ul">
+                    <volist name="cz" id="cz">
+                    <li>充值金额：<span>{$cz['tt']}</span></li>
+                    </volist>
+                </ul>
+            </div>
+            <div class="index_1">
+                <div class="top">充值来源</div>
+                <ul class="i_ul">
+                    <li>微信：<span>907</span></li>
+                    <li>支付宝：<span>907</span></li>
+                    <li>苹果支付：<span>907</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="index_mains">
+            <div class="index_1">
+                <div class="top">实名审核</div>
+                <ul class="i_ul">
+                    <volist name="audit" id="aud">
+                        <li>待审核的实名：<span>{$aud['aud_all']}</span></li>
+                    </volist>
+                </ul>
+            </div>
+            <div class="index_1">
+                <div class="top">主播审核</div>
+                <ul class="i_ul">
+                    <volist name="wlive" id="wlive">
+                        <li>待审核的实名：<span>{$wlive['wlive']}</span></li>
+                    </volist>
+                </ul>
+            </div>
+            <div class="index_1">
+                <div class="top">提现数据</div>
+                <ul class="i_ul">
+                    <volist name="tx" id="tx">
+                        <li>提现金额：<span>{$tx['tot']}</span></li>
+                    </volist>
+                    <volist name="ktx" id="ktx">
+                         <li>已成功提现金额：<span>{$ktx['tot']}</span></li>
+                    </volist>
+                    <volist name="wtx" id="wtx">
+                        <li>待处理提现金额：<span>{$wtx['tot']}</span></li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+        <div class="index_mains">
+            <div class="index_2">
+                <div class="top">热门主播</div>
+                <ul class="i_ul">
+                    <volist name="hotlive" id="hotlive">
+                        <li>
+                            <img src="__ROOT__/Upload/{$hotlive['user_img']}" alt=""/>
+                            <span>{$hotlive['nickname']}</span>
+                            <span>{$hotlive['tt']}</span>
+                        </li>
+                    </volist>
+                </ul>
+            </div>
+            <div class="index_1">
+                <div class="top">热门报名</div>
+                <ul class="i_ul">
+                    <volist name="hotbm" id="dm">
+                    <li style="clear: both; overflow: hidden"><span style="float: left;">{$dm['schedule_id']}</span><p class="hotPa" >{$dm['schedule_title']}</p><span style="float: left;">{$dm['tt']}</span></li>
+                    </volist>
+                </ul>
+            </div>
+            <div class="index_1">
+                <div class="top">发通告</div>
+                <ul class="i_ul">
+                    <volist name="send" id="se">
+                    <li><span>{$se['user_id']}</span>{$se['nickname']}<span>{$se['tt']}</span></li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+    </div>
+</block>

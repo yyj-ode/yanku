@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?>演库时代---演绎未来的通路！

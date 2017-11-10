@@ -1,0 +1,60 @@
+<extend name="Common/index"/>
+<block name="content">
+    <div class="zblist">
+        <p class="rec_pa">直播列表</p>
+        <div class="zblist_main">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="sr-only"></label>
+                    <p class="form-control-static">主播：</p>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="请输入会员ID值..">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+        </div>
+        <form action="">
+            <table class="table table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th width="15">
+                        <label>
+                            <input type="checkbox" class="js-check-all" id="input-all">
+                        </label>
+                    </th>
+                    <th>用户id</th>
+                    <th>昵称</th>
+                    <th>房间号</th>
+                    <th>直播状态</th>
+                    <th>直播开始时间</th>
+                    <th>播流地址</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="rows" id="row">
+                    <tr>
+                        <td>
+                            <input type="checkbox" class="js-check" name="ids[]" value="{$row['user_id']}">
+                        </td>
+                        <td>{$row['user_id']}</td>
+                        <td>{$row['nickname']} </td>
+                        <td>{$row['room_id']}</td>
+                        <td>直播中</td>
+                        <td>{$row['starttime']}</td>
+                        <td>{$row['pull']}</td>
+                        <td>
+                            <a href="{:U('dellist')}">删除</a>
+                            <!--<a href="">删除</a>-->
+                        </td>
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div class="pagination">
+        {$page_html}
+    </div>
+ </block>

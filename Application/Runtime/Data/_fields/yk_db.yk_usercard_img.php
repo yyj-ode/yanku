@@ -1,0 +1,1 @@
+a:3:{i:0;s:11:"usercard_id";i:1;s:12:"usercard_img";s:5:"_type";a:2:{s:11:"usercard_id";s:7:"int(11)";s:12:"usercard_img";s:12:"varchar(255)";}}

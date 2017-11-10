@@ -1,0 +1,1 @@
+a:6:{i:0;s:3:"vid";i:1;s:3:"eid";i:2;s:11:"episode_src";i:3;s:11:"episode_num";s:3:"_pk";s:3:"eid";s:5:"_type";a:4:{s:3:"vid";s:7:"int(11)";s:3:"eid";s:7:"int(11)";s:11:"episode_src";s:12:"varchar(255)";s:11:"episode_num";s:16:"int(11) unsigned";}}
